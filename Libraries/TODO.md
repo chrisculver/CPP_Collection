@@ -15,6 +15,11 @@ In CorrelationMatrixManager I liked the way I parsed the input, lets make that i
 functional class that can be used everywhere. 
 
 
+Logging Class
+-------------
+Just something to make a file and put output there.
+
+
 Utilities
 ---------
 For example split for strings, few other utils I use a lot

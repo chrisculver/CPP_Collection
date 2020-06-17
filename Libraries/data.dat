@@ -1,0 +1,5 @@
+nx 4
+ny 8
+nz 1000
+nt 4
+output_filename output.txt
