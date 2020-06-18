@@ -10,8 +10,9 @@
 #include <fstream>
 #include <charconv> 
 #include <iostream>
+#include <type_traits>
 
-template <class T> concept Integral = std::is_integral<T>::value;
+template <class T> concept Number = std::is_arithmetic<T>::value;
 
 class Input
 {
@@ -35,7 +36,7 @@ class Input
 
 
     template<typename T> 
-    void load_into( T &value, std::string name) requires Integral<T>
+    void load_into( T &value, std::string name) requires Number<T>
     {
       if( name_value.count(name) == 0 )
         throw name;
