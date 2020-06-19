@@ -9,25 +9,18 @@ template<typename T> concept Decimal_Number = std::is_floating_point<T>::value;
 
 
 
-
-template< template < class ... > class Container, class ... Args>
+///While this is cool, it doesn't work for std::array, I don't think it works 
+///for c style arrays either.
+template< template < typename... Args> class Container, Decimal_Number... Types>
 class ScalarField
 {
   public:
     ScalarField(){};
   private:
-    Container<Args...> field;
+    Container<Types...> field;
 };
 
 
-template< Decimal_Number P >
-class ScalarFieldV
-{
-  public:
-    ScalarFieldV(){};
-  private:
-    std::vector<P> field;
-};
 
 
 #endif
