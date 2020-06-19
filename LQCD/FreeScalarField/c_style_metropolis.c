@@ -59,8 +59,8 @@ double delta_s(double phi[], double phi_prime, double m, int i, int j, int NX, i
 
 int main()
 {
-  int NX = 5;
-  int NT = 5;
+  int NX = 128;
+  int NT = 128;
   int NC = 500;
   int m = 1;
   
